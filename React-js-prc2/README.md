@@ -11,8 +11,8 @@
 ## Step 2 - install React and react dom
 1. npm install react react-dom --save
 ### or
-1. npm install react --save
-2. npm install react-dom --save
+1.  npm install react --save
+2.  npm install react-dom --save
 
 ## Step 3 - Install webpack
 1. npm install webpack webpack-dev-server webpack-cli --save
