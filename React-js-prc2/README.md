@@ -4,9 +4,9 @@
 # Commands
 
 ## Step 1 - Create the Root Folder
-1. mkdir reactApp
-2. cd reactApp
-3. npm init -y
+    mkdir reactApp
+    cd reactApp
+    npm init -y
 
 ## Step 2 - install React and react dom
     npm install react react-dom --save
