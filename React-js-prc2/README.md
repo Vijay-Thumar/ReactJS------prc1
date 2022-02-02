@@ -77,7 +77,7 @@
         ]
         }
     ### vv Run This command vv
-    npm i --save-dev @babel/preset-env @babel/preset-react
+        npm i --save-dev @babel/preset-env @babel/preset-react
 
     #### Open the package.json 
     And delete "test" "echo \"Error: no test specified\" && exit 1"
