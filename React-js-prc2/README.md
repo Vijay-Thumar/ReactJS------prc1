@@ -98,25 +98,25 @@
         </body>
         </html>
     #### App.js and main.js
-        App.js
-            import React, { Component } from 'react';
-            class App extends Component{
-            render(){
-                return(
-                    <div>
-                        <h1>Hello World</h1>
-                    </div>
-                );
-            }
-            }
-            export default App;
+    ##### App.js
+        import React, { Component } from 'react';
+        class App extends Component{
+        render(){
+            return(
+                <div>
+                    <h1>Hello World</h1>
+                </div>
+            );
+        }
+        }
+        export default App;
         
-        main.js
-            import React from 'react';
-            import ReactDOM from 'react-dom';
-            import App from './App.js';
+    ##### main.js
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        import App from './App.js';
 
-            ReactDOM.render(<App />, document.getElementById('app'));
+        ReactDOM.render(<App />, document.getElementById('app'));
     
 ## Step 9 - Running the Server
-npm start
+    npm start
