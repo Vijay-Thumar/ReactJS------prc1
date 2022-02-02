@@ -10,20 +10,20 @@
 
 ## Step 2 - install React and react dom
     npm install react react-dom --save
-### or
+##### or
     npm install react --save
     npm install react-dom --save
 
 ## Step 3 - Install webpack
     npm install webpack webpack-dev-server webpack-cli --save
-### or
+##### or
     npm install webpack --save
     npm install webpack-dev-server --save
     npm install webpack-cli --save
 
 ## Step 4 - Install babel
     npm install babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin --save-dev
-### or 
+##### or 
     npm install babel-core --save-dev
     npm install babel-loader --save-dev
     npm install babel-preset-env --save-dev
@@ -37,7 +37,7 @@
     ./reactApp/webpack.config.js
     ./reactApp/.babelrc
 
-    #### webpack.config.js --> past code
+#### webpack.config.js --> past code
         const path = require('path');
         const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -70,22 +70,22 @@
         ]
         }
 
-    #### .babelrc ---> past code
+#### .babelrc ---> past code
         {
         "presets": [
         "@babel/preset-env", "@babel/preset-react"
         ]
         }
-    ### vv Run This command vv
+### vv Run This command vv
         npm i --save-dev @babel/preset-env @babel/preset-react
 
-    #### Open the package.json 
+#### Open the package.json 
     And delete "test" "echo \"Error: no test specified\" && exit 1"
                             Past 
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
 
-    #### Index.html
+#### Index.html
         <!DOCTYPE html>
         <html lang = "en">
         <head>
@@ -97,8 +97,8 @@
             <script src = 'index_bundle.js'></script>
         </body>
         </html>
-    #### App.js and main.js
-    ##### App.js
+#### App.js and main.js
+##### App.js
         import React, { Component } from 'react';
         class App extends Component{
         render(){
@@ -111,7 +111,7 @@
         }
         export default App;
         
-    ##### main.js
+##### main.js
         import React from 'react';
         import ReactDOM from 'react-dom';
         import App from './App.js';
