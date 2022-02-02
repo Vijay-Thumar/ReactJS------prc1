@@ -1,4 +1,10 @@
-# First React js Prc
+# First React js Prc 2
 
-### First Practical using CRA
-![Capture](https://user-images.githubusercontent.com/95664711/151928865-fb193a6f-a5e3-427f-92c5-d2fe343685ee.PNG)
+### First Practical using Web-Pack
+# Commands
+
+Step 1 - Create the Root Folder
+1. mkdir reactApp
+2. cd reactApp
+3. npm init -y
+4. 
