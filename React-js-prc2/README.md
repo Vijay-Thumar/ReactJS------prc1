@@ -10,20 +10,20 @@
 
 ## Step 2 - install React and react dom
 1. npm install react react-dom --save
-or
+### or
 1. npm install react --save
 2. npm install react-dom --save
 
 ## Step 3 - Install webpack
 1. npm install webpack webpack-dev-server webpack-cli --save
-or
+### or
 1. npm install webpack --save
 2. npm install webpack-dev-server --save
 3. npm install webpack-cli --save
 
 ## Step 4 - Install babel
 1. npm install babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin --save-dev
-or 
+### or 
 1. npm install babel-core --save-dev
 2. npm install babel-loader --save-dev
 3. npm install babel-preset-env --save-dev
