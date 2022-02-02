@@ -9,33 +9,33 @@
 3. npm init -y
 
 ## Step 2 - install React and react dom
-1. npm install react react-dom --save
+    npm install react react-dom --save
 ### or
-1.  npm install react --save
-2.  npm install react-dom --save
+    npm install react --save
+    npm install react-dom --save
 
 ## Step 3 - Install webpack
-1. npm install webpack webpack-dev-server webpack-cli --save
+    npm install webpack webpack-dev-server webpack-cli --save
 ### or
-1. npm install webpack --save
-2. npm install webpack-dev-server --save
-3. npm install webpack-cli --save
+    npm install webpack --save
+    npm install webpack-dev-server --save
+    npm install webpack-cli --save
 
 ## Step 4 - Install babel
-1. npm install babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin --save-dev
+    npm install babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin --save-dev
 ### or 
-1. npm install babel-core --save-dev
-2. npm install babel-loader --save-dev
-3. npm install babel-preset-env --save-dev
-4. npm install babel-preset-react --save-dev
-5. npm install html-webpack-plugin --save-dev
+    npm install babel-core --save-dev
+    npm install babel-loader --save-dev
+    npm install babel-preset-env --save-dev
+    npm install babel-preset-react --save-dev
+    npm install html-webpack-plugin --save-dev
 
 ## Step 5 - Create the Files
-1. ./reactApp/index.html
-2. ./reactApp/App.js
-3. ./reactApp/main.js
-4. ./reactApp/webpack.config.js
-5. ./reactApp/.babelrc
+    ./reactApp/index.html
+    ./reactApp/App.js
+    ./reactApp/main.js
+    ./reactApp/webpack.config.js
+    ./reactApp/.babelrc
 
     #### webpack.config.js --> past code
         const path = require('path');
