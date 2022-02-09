@@ -120,3 +120,10 @@
     
 ## Step 9 - Running the Server
     npm start
+    
+## Error solution for Cannot find module '@babel/core'
+    npm install @babel/core --save
+
+## Error solution for configration object
+    Replace the boiler code with step 5 webpack config file and .babelrc then run command
+        npm i --save-dev @babel/preset-env @babel/preset-react
