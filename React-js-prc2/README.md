@@ -38,7 +38,7 @@
     ./reactApp/.babelrc
 
 #### webpack.config.js --> past code
-            const path = require('path');
+    const path = require('path');
     const HtmlWebpackPlugin = require('html-webpack-plugin');
 
     module.exports = {
