@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Ubuntu:wght@500&display=swap');
+
+.date {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 40px;
+}
+
+.month_year {
+    display: inline-block;
+    margin: 0 0 0 8px;
+}
+
+.weekday {
+    float: right;
+    font-size: small;
+}
+
+.todo_date {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+    color: #444;
+}

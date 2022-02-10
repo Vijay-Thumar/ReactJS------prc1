@@ -1,0 +1,20 @@
+.maincontainer{
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 1px #d4d4d4;
+    padding: 24px 48px 48px;
+    position: relative;
+}
+
+
+.maincontainer .btn {
+    background-color: #50e3a4;
+    border: 2px #40b683;
+    margin: 0 auto;
+    padding: 16px 26px;
+    font-size: 36px;
+    color: rgb(85, 85, 85);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -37px;
+    left: 38%;
+}
