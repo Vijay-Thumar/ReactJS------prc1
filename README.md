@@ -1,5 +1,5 @@
 # React-JS all Practicals in single repository
-### We got
+### We Have projects like:
 
 Hot loader ---> React Hot Loader is a plugin that allows React components to be live reloaded without the loss of state.
 
