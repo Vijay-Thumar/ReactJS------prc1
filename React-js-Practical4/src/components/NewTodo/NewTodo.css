@@ -1,0 +1,39 @@
+.new_todo {
+    background-color: #cfd4cf;
+    padding: 10px;
+    margin: 20px auto;
+    width: inherit;
+    max-width: 100%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .new_todo button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #002fff;
+    background-color: #517df6;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }
+  
+  .new_todo button:hover,
+  .new_todo button:active {
+    background-color: #002fff;
+    border-color: #517df6;
+    font-weight: 40px;
+  }
+  
+  .new_todo button.alternative {
+    color: #040e99;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+  .new_todo button.alternative:hover,
+  .new_todo button.alternative:active {
+    background-color: #181bca;
+  }
