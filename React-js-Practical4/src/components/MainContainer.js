@@ -6,6 +6,7 @@ import UserTodo from './UserTodo';
 
 function MainContainer(props){
 
+    {localStorage.getItem("todos") || localStorage.setItem("todos", JSON.stringify([]))}
 
     const todolists = [
         {
@@ -18,45 +19,18 @@ function MainContainer(props){
           key:2,
           description: 'Bring promotional phase',
           isComplete:false
-        },
-        {
-          key:3,
-          description: 'Read an artical',
-          isComplete:false
-        },
-        {
-          key:4,
-          description: 'Try not to fall asleep',
-          isComplete:false
-        },
-        {
-          key:5,
-          description: 'Watch\'Sherlock\' ',
-          isComplete:false
-        },
-        {
-          key:6,
-          description: 'Bring QA for the product',
-          isComplete:false
-        },
-        {
-          key:7,
-          description: 'Go for a Walk',
-          isComplete:false
         }
     ];
 
 
-    const[list, setList] = useState(todolists);
+    const[list, setList] = useState(JSON.parse(localStorage.getItem("todos")));
 
         const addTodoHandler = () => {};
 
         const datahandler = (data) => {
-            console.log(data);
             const newTodos = [data, ...list];
-            // todolists.push(data);
             setList(newTodos);
-            console.log(newTodos);
+            localStorage.setItem("todos", JSON.stringify(newTodos))
         }
 
     return(
@@ -64,9 +38,9 @@ function MainContainer(props){
             
             <Dateoftodo />
             <div>
-                { 
+                { localStorage.getItem("todos") &&
                 list.map((item) => {
-                return <UserTodo isChecked={item.isComplete} key={item.key} task={item.description}/>
+                return <UserTodo isChecked={item.isComplete} key={item.key} task={item.description} onComplition={addTodoHandler}/>
                 }) 
                 }
             </div>

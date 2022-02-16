@@ -14,7 +14,7 @@ function UserTodo(props){
         <React.Fragment>
             <div className='usertodo'>
                 <span className={checked ? 'strike' : ''}>{props.task}</span>
-                <input className='chkbox' type={'checkbox'} onClick={changeStatus} defaultChecked={checked}/>
+                <input className='chkbox' type={'checkbox'} onClick={changeStatus} defaultChecked={checked} />
             </div>
         </React.Fragment>
     );
