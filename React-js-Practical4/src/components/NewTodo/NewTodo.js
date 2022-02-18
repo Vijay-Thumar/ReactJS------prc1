@@ -23,9 +23,13 @@ function NewTodo(props){
         props.onAddTodo(todoData);
     };
 
+    const cancelHandler  = (value) => {
+        props.cancelHandler = value;
+    };
+
     return (
         <div className='new_todo'>
-            <TodoForm onSaveTodoData={saveTodoDataHandler}/>
+            <TodoForm onSaveTodoData={saveTodoDataHandler} cancelHandler={cancelHandler}/>
         </div>
     );
 };

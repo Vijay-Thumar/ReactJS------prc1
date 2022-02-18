@@ -10,6 +10,9 @@ const TodoForm =(props) => {
         event.preventDefault();
         props.onSaveTodoData(title.current.value);
     };
+    const cancelHandler = (event) => {
+        props.cancelHandler(false);
+    };
     
     return (
         <form onSubmit={submitHandler}>
@@ -19,10 +22,13 @@ const TodoForm =(props) => {
                 <input type="text" ref={title}/>
             </div>
             
-            <div className='new_todo__action'>
+            
+            <span className='new_todo__action'>
                 <button type='submit'>submit</button>
-            </div>
-
+            </span>
+            <span>
+                <button className='cancel__action' onClick={cancelHandler}>Cancel</button>
+            </span>
         </form>
     );
 };

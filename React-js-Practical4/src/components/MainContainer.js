@@ -24,6 +24,7 @@ function MainContainer(props){
 
 
     const[list, setList] = useState(JSON.parse(localStorage.getItem("todos")));
+    const[showForm, setShowForm] = useState(false);
 
         const addTodoHandler = () => {};
 
@@ -31,7 +32,16 @@ function MainContainer(props){
             const newTodos = [data, ...list];
             setList(newTodos);
             localStorage.setItem("todos", JSON.stringify(newTodos))
+            setShowForm(false);
         }
+
+        const showFormHandler = () => {
+            setShowForm(true);
+        };
+        
+        const cancelHandler = () => {
+            setShowForm(false);
+        };
 
     return(
         <div className='maincontainer'>
@@ -44,10 +54,10 @@ function MainContainer(props){
                 }) 
                 }
             </div>
-            <NewTodo onAddTodo={datahandler}/>
-            <div className='btn_div'>
+            {showForm && <NewTodo onAddTodo={datahandler} cancelHandler={cancelHandler}/>}
+            {!showForm && <div className='btn_div' onClick={showFormHandler}>
                 <button className='btn'>+</button>
-            </div>
+            </div>}
         </div>
         
     );
