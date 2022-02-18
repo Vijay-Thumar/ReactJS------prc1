@@ -14,6 +14,9 @@ function NewTodo(props){
     }
 
     const saveTodoDataHandler = (enteredTodoData) => {
+        // if(!enteredTodoData.text || /^\s*$/.test(enteredTodoData.text)){
+        //     return};
+
         const todoData ={
             key: makeid(8),
             description: enteredTodoData,
@@ -24,12 +27,12 @@ function NewTodo(props){
     };
 
     const cancelHandler  = (value) => {
-        props.cancelHandler = value;
+        props.cancelHandler(value);
     };
 
     return (
         <div className='new_todo'>
-            <TodoForm onSaveTodoData={saveTodoDataHandler} cancelHandler={cancelHandler}/>
+            <TodoForm onSaveTodoData={saveTodoDataHandler} onCancelHandler={cancelHandler}/>
         </div>
     );
 };
