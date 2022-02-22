@@ -1,0 +1,10 @@
+.App {
+  font: 1em sans-serif;
+  background-color: #f0efe9;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
