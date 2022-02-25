@@ -1,6 +1,6 @@
 # Practical 5
 
-### Link:
+### Live-Link:
         https://adoring-dubinsky-7f3ae9.netlify.app/
 
 ## Output:
