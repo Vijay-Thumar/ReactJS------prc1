@@ -1,68 +1,50 @@
-import './MainContainer.css'
-import React, { useState } from 'react'
-import HeaderUser from './HeaderUser'
-import User from './User'
+import './MainContainer.css';
+import React, { useState, useEffect } from 'react';
+import HeaderUser from './HeaderUser';
+import User from './User';
 import UserProfile from './UserProfile'
+import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { useSelector } from 'react-redux';
 
 function MainContainer() {
-    const Users_List = [
-        {
-            key: 1,
-            UserProfile: 'img',
-            UserName: 'Vijay Thumar',
-            UserEmail: 'vijay_thumar@yopmail.com',
-            UserStatus: 'Online',
-            UserAccess: 'Admin',
-            isOwner: true
-        },
-        {
-            key: 2,
-            UserProfile: 'img',
-            UserName: 'Maria Drako',
-            UserEmail: 'Maria_Drako@yopmail.com',
-            UserStatus: 'Online',
-            UserAccess: 'user',
-            isOwner: false
-        },
-        {
-            key: 3,
-            UserProfile: 'img',
-            UserName: 'Cassandra granger',
-            UserEmail: 'Cassandra_granger@yopmail.com',
-            UserStatus: 'Offline',
-            UserAccess: 'user',
-            isOwner: false
-        },
-        {
-            key: 4,
-            UserProfile: 'img',
-            UserName: 'Riya makhani',
-            UserEmail: 'Riya_makhani@yopmail.com',
-            UserStatus: 'Offline',
-            UserAccess: 'user',
-            isOwner: false
-        },
-        {
-            key: 5,
-            UserProfile: 'img',
-            UserName: 'Mitesh donga',
-            UserEmail: 'Mitesh_donga@yopmail.com',
-            UserStatus: 'Offline',
-            UserAccess: 'user',
-            isOwner: false
-        },
-        {
-            key: 6,
-            UserProfile: 'img',
-            UserName: 'Rajesh koothrappali',
-            UserEmail: 'Rajesh_koothrappali@yopmail.com',
-            UserStatus: 'Offline',
-            UserAccess: 'user',
-            isOwner: false
-        },
-    ]
+    const profileVisibility = useSelector(state => state.profile.IsMouseEntred);
+    const [profile, setProfile] = useState({}); // Complex data on weekend
+    const [isLoading, setIsLoading] = useState(false);
+    const [userList, setUserList] = useState([]);
+    let myList = [];
 
-    const [profile, setProfile] = useState({});
+    const callApi = (url) => {
+        fetch(url)
+            .then((data) => {
+                return data.json();
+            })
+            .then((res) => {
+                myList = res.data;
+                myList.map((item) => {
+                    item.user_status = "Offline";
+                    item.user_access = "User";
+                    item.uisowner = false;
+                    return item;
+                });
+                setUserList(myList);
+                setIsLoading(true)
+                console.log(myList);
+            });
+    }
+
+    const page1 = () => {
+        setIsLoading(true);
+        callApi('https://reqres.in/api/users?page=1');
+        setIsLoading(false);
+    }
+
+    const page2 = () => {
+        callApi('https://reqres.in/api/users?page=2');
+    }
+
+    useEffect(() => {
+        callApi('https://reqres.in/api/users?page=1');
+    }, []);
 
     const mouseEnterHandler = (data) => {
         setProfile(data);
@@ -70,26 +52,37 @@ function MainContainer() {
 
     return (
         <React.Fragment>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
             <div className='MainContainer'>
                 <div>
                     <HeaderUser />
-                    {
-                        Users_List.map((user) => {
+
+                    {!isLoading && <span>Loading...</span>}
+                    {isLoading &&
+                        userList.map((user) => {
                             return <User onHover={mouseEnterHandler}
-                                Ukey={user.key}
-                                Uprofile={user.UserProfile}
-                                Uname={user.UserName}
-                                Ustatus={user.UserStatus}
-                                Uaccess={user.UserAccess}
-                                Uisowner={user.isOwner}
-                                Uemail={user.UserEmail}
-                            // userData = {Users_List}
+                                ukey={user.id}
+                                userFirstName={user.first_name}
+                                userLastName={user.last_name}
+                                uemail={user.email}
+                                user_avatar={user.avatar}
+                                ustatus={(user.id === 1 || user.id === 7) ? user.user_status = "Online" : user.user_status}
+                                uaccess={(user.id === 1 || user.id === 7) ? user.user_access = 'Admin' : user.user_access}
+                                uisowner={(user.id === 1 || user.id === 7) ? user.uisowner = true : user.uisowner}
                             />
                         })
                     }
+                    <div className='pages'>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item" onClick={page1}><button class="page-link">1</button></li>
+                                <li class="page-item" onClick={page2}><button class="page-link">2</button></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
                 <div className='User_Profile'>
-                    {profile.IsMouseEntred && <UserProfile data={profile} />}
+                    {profileVisibility && <UserProfile data={profile} />}
                 </div>
             </div>
         </React.Fragment>
