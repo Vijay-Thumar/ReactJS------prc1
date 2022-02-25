@@ -1,0 +1,23 @@
+.Header {
+    font-weight: bold;
+    font-size: medium;
+    padding-top: 15px;
+    color: #5D5C61;
+}
+
+.Title-Name,
+.Title-Status,
+.Title-Access {
+    font-size: larger;
+    font-weight: bold;
+}
+.Title-Name{
+    margin-left: 20px;
+    width: 230px;
+}
+.Title-Status{
+    width: 230px;
+}
+.Title-Access{
+    width: 230px;
+}

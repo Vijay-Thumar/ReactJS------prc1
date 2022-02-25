@@ -1,0 +1,82 @@
+.users {
+    background-color: #bebaba42;
+    border-radius: 25px;
+    max-width: fit-content;
+    padding: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 4px;
+}
+
+.users:hover {
+    background-color: #bebaba;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.User_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Profile_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 250px;
+}
+
+.userImg {
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.profilePhoto_withName {
+    display: inline-block;
+    margin-left: 20px;
+    width: 250px;
+}
+
+.user_name {
+    margin: 0 8px;
+}
+
+.User_Email {
+    color: #949494;
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+.user-status {
+    display: inline-block;
+    width: 250px;
+}
+
+.user-access {
+    display: inline-block;
+    width: 90px;
+}
+
+.user-icon {
+    display: inline-block;
+    width: 50px;
+}
+
+
+span {
+    display: inline-block;
+}
+
+.blur_ico {
+    color: #949494;
+}
+
+.dropdown {
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    background-color: #d1d1d1d7;
+    box-shadow: 0px 0px 1px 0px #4d4b4bd7;
+
+}

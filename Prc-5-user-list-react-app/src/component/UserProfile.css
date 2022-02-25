@@ -1,0 +1,65 @@
+.mainDiv_flex {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    min-width: 250px;
+    max-width: fit-content;
+    padding: 15px;
+    box-shadow: 6px 6px 12px#4d4b4bd7;
+    text-align: center;
+}
+
+.mainDiv_flex div {
+    margin: 6px 0px 6px 0px;
+}
+
+.user_img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.User_name {
+    font-weight: bold;
+}
+
+.User_email {
+    font-size: small;
+    color: #646464;
+}
+
+.button_color {
+    background-color: #FEB23E;
+    color: white;
+    border-radius: 6px;
+    border: 0px;
+    min-width: 170px;
+    padding: 10px;
+    font-size: small;
+    font-weight: bold;
+    box-shadow: 6px 6px 12px#cacacad7;
+}
+
+.plan_uses {
+    text-align: left;
+}
+
+.flexbod-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Clicks{
+    font-weight: bold;
+    font-size: larger;
+}
+.usage_bar{
+    background-color: #FFF5E5;
+    width: 220px;
+    height: 14px;
+}
+.initial_usage{
+    background-color: #F09F2B;
+    width: 150px;
+    height: 4px;
+}
