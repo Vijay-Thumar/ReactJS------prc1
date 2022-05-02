@@ -1,0 +1,15 @@
+.main_form{
+    max-width: 800px;
+    margin: auto auto;
+    background-color: rgb(224, 222, 222);
+    padding: 25px 80px;
+    border-radius: 25px;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+.error_section{
+    color: red;
+}
+.input_element{
+    margin-top: 12px;
+}
